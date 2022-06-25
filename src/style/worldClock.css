@@ -162,7 +162,7 @@
 
 .world-clock .clock-container .sec {
   width: 1em;
-  height: 12em;
+  height: 13em;
   border-radius: 1em;
 }
 
@@ -199,8 +199,9 @@
 }
 
 .world-clock .clock-container .sec::before {
-  width: .5em;
-  height: 6em;
+  width: .2em;
+  height: 6.5em;
+  background-color: #fd5a02;
 }
 
 .world-clock .date {

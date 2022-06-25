@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react'
 import { Location } from './location'
 import { Clock } from './clock'
-import { Date } from './date'
+import {  Today } from './date'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  
@@ -15,11 +15,11 @@ export const WorldClock = () => {
    }
   return (
     <div className='world-clock'>
-    <input type='text'value={'dubai'} className='current-location' />
+    <input type='text'value={'dubai'} className='current-location' readOnly />
    <button title='change location' className={clicked?'chose-location rotate':'chose-location'} onClick={()=>{clicked ? setCliked(false):setCliked(true)}}><FontAwesomeIcon icon={solid("location-dot")} /></button>
     <Location clicked={ParentToChild(clicked)} optioncliked={ChildToParent}/>
     <Clock />
-    <Date />
+    <Today />
     </div>
   )
 }
